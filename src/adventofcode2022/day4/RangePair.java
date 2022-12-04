@@ -23,4 +23,12 @@ final class RangePair {
     boolean oneRangeContainsOther() {
         return range1.contains(range2) || range2.contains(range1);
     }
+
+    Range getRange1() {
+        return range1;
+    }
+
+    Range getRange2() {
+        return range2;
+    }
 }
