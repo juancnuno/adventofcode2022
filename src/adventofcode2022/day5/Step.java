@@ -26,4 +26,16 @@ final class Step {
     void moveCrates(Stacks stacks) {
         IntStream.range(0, crateCount).forEach(index -> stacks.move(fromStackIndex, toStackIndex));
     }
+
+    int getCrateCount() {
+        return crateCount;
+    }
+
+    int getFromStackIndex() {
+        return fromStackIndex;
+    }
+
+    int getToStackIndex() {
+        return toStackIndex;
+    }
 }

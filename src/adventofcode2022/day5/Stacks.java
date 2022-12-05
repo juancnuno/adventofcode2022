@@ -31,6 +31,17 @@ final class Stacks {
         stacks.get(toIndex).addLast(crate);
     }
 
+    void move(Step step) {
+        Deque<Character> stack = stacks.get(step.getFromStackIndex());
+        Deque<Character> subStack = new ArrayDeque<>();
+
+        IntStream.range(0, step.getCrateCount())
+                .mapToObj(index -> stack.removeLast())
+                .forEach(subStack::addFirst);
+
+        stacks.get(step.getToStackIndex()).addAll(subStack);
+    }
+
     Object getTopCrates() {
         return stacks.stream()
                 .map(Deque::getLast)
