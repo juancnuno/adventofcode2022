@@ -8,22 +8,30 @@ final class Scanner {
     }
 
     int getStartOfPacketMarkerPosition() {
-        for (int i = 0, length = buffer.length(); i + 4 <= length; i++) {
-            if (areAllCharactersDifferent(buffer.subSequence(i, i + 4))) {
-                return i + 4;
+        return getMarkerPosition(4);
+    }
+
+    int getStartOfMessageMarkerPosition() {
+        return getMarkerPosition(14);
+    }
+
+    private int getMarkerPosition(int markerLength) {
+        for (int i = 0, bufferLength = buffer.length(); i + markerLength <= bufferLength; i++) {
+            if (areAllCharactersDifferent(buffer.subSequence(i, i + markerLength), markerLength)) {
+                return i + markerLength;
             }
         }
 
         throw new AssertionError(buffer);
     }
 
-    private static boolean areAllCharactersDifferent(CharSequence subbuffer) {
-        assert subbuffer.length() == 4;
+    private static boolean areAllCharactersDifferent(CharSequence subbuffer, int markerLength) {
+        assert subbuffer.length() == markerLength;
 
         var count = subbuffer.chars()
                 .distinct()
                 .count();
 
-        return count == 4;
+        return count == markerLength;
     }
 }
