@@ -2,6 +2,8 @@ package com.juancnuno.adventofcode2022.day7;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.OptionalInt;
+
 import org.junit.jupiter.api.Test;
 
 final class FilesystemTest {
@@ -66,7 +68,7 @@ final class FilesystemTest {
   }
 
   @Test
-  void getTotalSize() {
+  void getTotalSize1() {
     // Act
     var sum = root.directories()
         .mapToInt(File::getTotalSize)
@@ -75,5 +77,20 @@ final class FilesystemTest {
 
     // Assert
     assertEquals(95_437, sum);
+  }
+
+  @Test
+  void getTotalSize2() {
+    // Act
+    var unusedSpace = 70_000_000 - root.getTotalSize();
+    var neededSpace = 30_000_000 - unusedSpace;
+
+    var size = root.directories()
+        .mapToInt(File::getTotalSize)
+        .filter(s -> s >= neededSpace)
+        .min();
+
+    // Assert
+    assertEquals(OptionalInt.of(24_933_642), size);
   }
 }
