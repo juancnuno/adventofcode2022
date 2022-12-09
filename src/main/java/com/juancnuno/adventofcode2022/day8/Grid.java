@@ -3,6 +3,7 @@ package com.juancnuno.adventofcode2022.day8;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 final class Grid {
     private final List<List<Tree>> rows;
@@ -30,9 +31,20 @@ final class Grid {
     }
 
     int getVisibleTreeCount() {
-        return (int) rows.stream()
-                .flatMap(Collection::stream)
+        return (int) trees()
                 .filter(Tree::isVisible)
                 .count();
+    }
+
+    int getMaxScenicScore() {
+        var score = trees()
+                .mapToInt(Tree::getScenicScore)
+                .max();
+
+        return score.orElse(0);
+    }
+
+    private Stream<Tree> trees() {
+        return rows.stream().flatMap(Collection::stream);
     }
 }
