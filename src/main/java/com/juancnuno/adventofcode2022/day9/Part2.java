@@ -7,14 +7,14 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.stream.Stream;
 
-final class Part1 {
+final class Part2 {
     private final Stream<String> motions;
-    private final Rope rope;
+    final Rope rope;
     private final Collection<Position> positions;
 
-    Part1(Stream<String> motions) {
+    Part2(Stream<String> motions) {
         this.motions = motions;
-        rope = new Rope(2);
+        rope = new Rope(10);
 
         positions = new HashSet<>();
         positions.add(rope.getTail().getPosition());
@@ -30,7 +30,7 @@ final class Part1 {
 
     public static void main(String[] args) throws IOException {
         try (var motions = Files.lines(Path.of(args[0]))) {
-            System.out.println(new Part1(motions).getPositionCount());
+            System.out.println(new Part2(motions).getPositionCount());
         }
     }
 }
