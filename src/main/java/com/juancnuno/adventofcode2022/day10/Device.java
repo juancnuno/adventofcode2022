@@ -69,12 +69,12 @@ final class Device {
         }
     }
 
-    Cpu getCpu() {
-        return cpu;
-    }
-
     Object getCrt() {
         return crt;
+    }
+
+    Cpu getCpu() {
+        return cpu;
     }
 
     int getSignalStrengthSum() {
