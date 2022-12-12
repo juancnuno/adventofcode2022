@@ -4,7 +4,7 @@ import java.util.Optional;
 
 final class Noop extends Instruction {
     private Noop() {
-        super(1);
+        super(0);
     }
 
     static Optional<Instruction> parseNoop(CharSequence instruction) {

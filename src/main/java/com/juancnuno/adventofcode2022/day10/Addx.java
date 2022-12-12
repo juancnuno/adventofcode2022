@@ -8,7 +8,7 @@ final class Addx extends Instruction {
     private final int value;
 
     private Addx(int value) {
-        super(2);
+        super(1);
         this.value = value;
     }
 

@@ -1,18 +1,20 @@
 package com.juancnuno.adventofcode2022.day10;
 
 import java.util.Iterator;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 final class Device {
+    private final Crt crt;
     private final Cpu cpu;
     private final Iterator<Instruction> instructions;
 
     private Instruction current;
     private int cycle;
+    private int sum;
 
     Device(Stream<String> instructions) {
         cpu = new Cpu();
+        crt = new Crt();
 
         this.instructions = instructions
                 .map(Instruction::parseInstruction)
@@ -21,32 +23,27 @@ final class Device {
         current = this.instructions.next();
     }
 
-    int getSignalStrengthSum() {
-        var sum = 0;
-
-        tickNTimes(20);
-        sum += getSignalStrength();
-
-        for (var i = 0; i < 5; i++) {
-            tickNTimes(40);
-            sum += getSignalStrength();
+    void runProgram() {
+        while (current != null) {
+            tick();
         }
-
-        return sum;
-    }
-
-    private void tickNTimes(int n) {
-        IntStream.range(0, n).forEach(i -> tick());
     }
 
     void tick() {
-        if (current != null && !current.hasBegun()) {
+        cycle++;
+
+        if (current == null) {
+            return;
+        }
+
+        if (!current.hasBegun()) {
             current.begin(cycle);
         }
 
-        cycle++;
+        addInterestingSignalStrengths();
+        crt.draw(cpu);
 
-        if (current != null && current.isDone(cycle)) {
+        if (current.isDone(cycle)) {
             current.finish(cpu);
 
             if (instructions.hasNext()) {
@@ -57,11 +54,30 @@ final class Device {
         }
     }
 
-    private int getSignalStrength() {
-        return cycle * cpu.getX();
+    private void addInterestingSignalStrengths() {
+        switch (cycle) {
+            case 20:
+            case 60:
+            case 100:
+            case 140:
+            case 180:
+            case 220:
+                sum += cycle * cpu.getX();
+                break;
+            default:
+                break;
+        }
     }
 
     Cpu getCpu() {
         return cpu;
+    }
+
+    Object getCrt() {
+        return crt;
+    }
+
+    int getSignalStrengthSum() {
+        return sum;
     }
 }
