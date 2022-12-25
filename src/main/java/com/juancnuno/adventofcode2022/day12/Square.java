@@ -12,16 +12,16 @@ record Square(char elevation, int rowIndex, int columnIndex, int distance) imple
             .thenComparing(Square::rowIndex)
             .thenComparing(Square::columnIndex);
 
-    Square(char elevation, int rowIndex, int columnIndex) {
-        this(elevation, rowIndex, columnIndex, elevation == 'S' ? 0 : Integer.MAX_VALUE);
-    }
-
     boolean isStart() {
         return elevation == 'S';
     }
 
     boolean isEnd() {
         return elevation == 'E';
+    }
+
+    boolean isLow() {
+        return elevation == 'S' || elevation == 'a';
     }
 
     Stream<Square> unvisitedNeighbors(Heightmap heightmap, Collection<Square> unvisitedNeighbors) {
