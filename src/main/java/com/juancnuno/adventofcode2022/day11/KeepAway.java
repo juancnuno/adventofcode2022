@@ -28,6 +28,6 @@ final class KeepAway {
     }
 
     private void playRound() {
-        monkeys.stream().forEach(monkey -> monkey.takeTurn(monkeys));
+        monkeys.forEach(monkey -> monkey.takeTurn(monkeys));
     }
 }

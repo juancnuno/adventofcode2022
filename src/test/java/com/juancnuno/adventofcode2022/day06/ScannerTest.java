@@ -1,8 +1,8 @@
 package com.juancnuno.adventofcode2022.day06;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 final class ScannerTest {
     private ScannerTest() {
@@ -11,6 +11,7 @@ final class ScannerTest {
     @Test
     void getStartOfPacketMarkerPosition1() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("mjqjpqmgbljsphdztnvjfqwrcgsmlb");
 
         // Act
@@ -23,6 +24,7 @@ final class ScannerTest {
     @Test
     void getStartOfPacketMarkerPosition2() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("bvwbjplbgvbhsrlpgdmjqwftvncz");
 
         // Act
@@ -35,6 +37,7 @@ final class ScannerTest {
     @Test
     void getStartOfPacketMarkerPosition3() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("nppdvjthqldpwncqszvftbrmjlhg");
 
         // Act
@@ -47,6 +50,7 @@ final class ScannerTest {
     @Test
     void getStartOfPacketMarkerPosition4() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg");
 
         // Act
@@ -59,6 +63,7 @@ final class ScannerTest {
     @Test
     void getStartOfPacketMarkerPosition5() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw");
 
         // Act
@@ -71,6 +76,7 @@ final class ScannerTest {
     @Test
     void getStartOfMessageMarkerPosition1() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("mjqjpqmgbljsphdztnvjfqwrcgsmlb");
 
         // Act
@@ -83,6 +89,7 @@ final class ScannerTest {
     @Test
     void getStartOfMessageMarkerPosition2() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("bvwbjplbgvbhsrlpgdmjqwftvncz");
 
         // Act
@@ -95,6 +102,7 @@ final class ScannerTest {
     @Test
     void getStartOfMessageMarkerPosition3() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("nppdvjthqldpwncqszvftbrmjlhg");
 
         // Act
@@ -107,6 +115,7 @@ final class ScannerTest {
     @Test
     void getStartOfMessageMarkerPosition4() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg");
 
         // Act
@@ -119,6 +128,7 @@ final class ScannerTest {
     @Test
     void getStartOfMessageMarkerPosition5() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var scanner = new Scanner("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw");
 
         // Act

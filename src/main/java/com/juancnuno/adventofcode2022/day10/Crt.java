@@ -24,7 +24,7 @@ final class Crt {
 
     private static List<Character> collectColumns() {
         return IntStream.range(0, COLUMN_COUNT)
-                .mapToObj(columnIndex -> Character.valueOf('.'))
+                .mapToObj(columnIndex -> '.')
                 .collect(Collectors.toList());
     }
 
@@ -56,7 +56,7 @@ final class Crt {
 
     private static void append(StringBuilder builder, List<Character> row) {
         IntStream.range(0, COLUMN_COUNT)
-                .mapToObj(columnIndex -> row.get(columnIndex))
+                .mapToObj(row::get)
                 .forEach(builder::append);
 
         builder.append(System.lineSeparator());

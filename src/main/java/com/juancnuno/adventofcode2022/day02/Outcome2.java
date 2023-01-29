@@ -12,6 +12,7 @@ enum Outcome2 {
     /**
      * Loss
      */
+    @SuppressWarnings("unused")
     X(0) {
         @Override
         YourPlay getYourPlay(OpponentsPlay play) {
@@ -26,6 +27,7 @@ enum Outcome2 {
     /**
      * Draw
      */
+    @SuppressWarnings("unused")
     Y(3) {
         @Override
         YourPlay getYourPlay(OpponentsPlay play) {
@@ -40,6 +42,7 @@ enum Outcome2 {
     /**
      * Win
      */
+    @SuppressWarnings("unused")
     Z(6) {
         @Override
         YourPlay getYourPlay(OpponentsPlay play) {
@@ -53,6 +56,7 @@ enum Outcome2 {
 
     private final int score;
 
+    @SuppressWarnings("unused")
     Outcome2(int score) {
         this.score = score;
     }

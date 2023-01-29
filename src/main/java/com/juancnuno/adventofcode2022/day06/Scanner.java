@@ -25,10 +25,10 @@ final class Scanner {
         throw new AssertionError(buffer);
     }
 
-    private static boolean areAllCharactersDifferent(CharSequence subbuffer, int markerLength) {
-        assert subbuffer.length() == markerLength;
+    private static boolean areAllCharactersDifferent(CharSequence subBuffer, int markerLength) {
+        assert subBuffer.length() == markerLength;
 
-        var count = subbuffer.chars()
+        var count = subBuffer.chars()
                 .distinct()
                 .count();
 

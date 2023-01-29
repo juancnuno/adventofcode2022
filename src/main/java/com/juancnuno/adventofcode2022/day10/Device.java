@@ -56,16 +56,7 @@ final class Device {
 
     private void addInterestingSignalStrengths() {
         switch (cycle) {
-            case 20:
-            case 60:
-            case 100:
-            case 140:
-            case 180:
-            case 220:
-                sum += cycle * cpu.getX();
-                break;
-            default:
-                break;
+            case 20, 60, 100, 140, 180, 220 -> sum += cycle * cpu.getX();
         }
     }
 

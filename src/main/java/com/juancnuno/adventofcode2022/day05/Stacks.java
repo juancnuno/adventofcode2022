@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
 final class Stacks {
     private final List<Deque<Character>> stacks;
 
-    Stacks(int count) {
+    Stacks(@SuppressWarnings("SameParameterValue") int count) {
         stacks = new ArrayList<>(count);
 
         IntStream.range(0, count)

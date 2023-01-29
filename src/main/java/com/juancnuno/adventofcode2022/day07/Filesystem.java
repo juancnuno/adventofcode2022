@@ -51,7 +51,7 @@ final class Filesystem {
         Matcher matcher = LS_OUTPUT_LINE.matcher(line);
 
         if (!matcher.matches()) {
-            assert false;
+            throw new IllegalArgumentException(line);
         }
 
         current.addFile(new File(matcher.group(2), Integer.parseInt(matcher.group(1)), current));

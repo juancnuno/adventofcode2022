@@ -1,10 +1,10 @@
 package com.juancnuno.adventofcode2022.day12;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.OptionalInt;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 final class PathfinderTest {
     private PathfinderTest() {
@@ -13,6 +13,7 @@ final class PathfinderTest {
     @Test
     void getMinStepCountFromStartToEnd1() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var input = """
                 Sabqponm
                 abcryxxl
@@ -33,6 +34,7 @@ final class PathfinderTest {
     @Test
     void getMinStepCountFromStartToEnd2() {
         // Arrange
+        @SuppressWarnings("SpellCheckingInspection")
         var input = """
                 Sabqponm
                 abcryxxl
