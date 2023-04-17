@@ -34,21 +34,18 @@ record List(Collection<Element> elements) implements Element {
 
     @Override
     public int compareTo(Element element) {
-        if (element instanceof List list) {
-            var iterator = elements.iterator();
-            var listIterator = list.elements.iterator();
+        var iterator = elements.iterator();
+        var list = element instanceof List ? (List) element : new List((Integer) element);
+        var listIterator = list.elements.iterator();
 
-            while (iterator.hasNext() && listIterator.hasNext()) {
-                var result = iterator.next().compareTo(listIterator.next());
+        while (iterator.hasNext() && listIterator.hasNext()) {
+            var result = iterator.next().compareTo(listIterator.next());
 
-                if (result != 0) {
-                    return result;
-                }
+            if (result != 0) {
+                return result;
             }
-
-            return java.lang.Integer.compare(elements.size(), list.elements.size());
         }
 
-        return compareTo(new List((Integer) element));
+        return java.lang.Integer.compare(elements.size(), list.elements.size());
     }
 }
