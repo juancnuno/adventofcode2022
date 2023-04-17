@@ -4,8 +4,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-final class List extends Element {
-    private final Collection<Element> elements;
+record List(Collection<Element> elements) implements Element {
+    List(Integer integer) {
+        this(java.util.List.of(integer));
+    }
+
+    private List(Builder builder) {
+        this(builder.elements);
+    }
 
     static final class Builder {
         private final Collection<Element> elements = new ArrayList<>();
@@ -17,14 +23,6 @@ final class List extends Element {
         Element build() {
             return new List(this);
         }
-    }
-
-    private List(Builder builder) {
-        elements = builder.elements;
-    }
-
-    List(Integer integer) {
-        elements = java.util.List.of(integer);
     }
 
     @Override

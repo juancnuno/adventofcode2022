@@ -1,6 +1,6 @@
 package com.juancnuno.adventofcode2022.day13;
 
-final class Integer extends Element {
+final class Integer implements Element {
     private final int value;
 
     static final class Builder {
