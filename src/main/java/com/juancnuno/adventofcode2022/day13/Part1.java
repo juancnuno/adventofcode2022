@@ -1,8 +1,7 @@
 package com.juancnuno.adventofcode2022.day13;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
+
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -30,7 +29,7 @@ final class Part1 {
         return list.get(0).compareTo(list.get(1)) < 0;
     }
 
-    public static void main(String[] args) throws IOException {
-        System.out.println(new Part1(Files.readString(Path.of(args[0]))).getSum());
+    public static void main(String[] args) {
+        System.out.println(new Part1(AdventOfCode.readStringFromInputTxt()).getSum());
     }
 }

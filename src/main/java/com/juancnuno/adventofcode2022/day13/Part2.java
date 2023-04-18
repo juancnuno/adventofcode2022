@@ -1,8 +1,7 @@
 package com.juancnuno.adventofcode2022.day13;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
+
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -29,7 +28,7 @@ final class Part2 {
         return (packets.indexOf(divider1) + 1) * (packets.indexOf(divider2) + 1);
     }
 
-    public static void main(String[] args) throws IOException {
-        System.out.println(new Part2(Files.readString(Path.of(args[0]))).getDecoderKey());
+    public static void main(String[] args) {
+        System.out.println(new Part2(AdventOfCode.readStringFromInputTxt()).getDecoderKey());
     }
 }

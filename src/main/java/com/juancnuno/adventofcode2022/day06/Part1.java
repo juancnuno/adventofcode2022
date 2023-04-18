@@ -1,15 +1,12 @@
 package com.juancnuno.adventofcode2022.day06;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
 
 final class Part1 {
     private Part1() {
     }
 
-    public static void main(String[] args) throws IOException {
-        var input = Path.of(args[0]);
-        System.out.println(new Scanner(Files.readString(input)).getStartOfPacketMarkerPosition());
+    public static void main(String[] args) {
+        System.out.println(new Scanner(AdventOfCode.readStringFromInputTxt()).getStartOfPacketMarkerPosition());
     }
 }
