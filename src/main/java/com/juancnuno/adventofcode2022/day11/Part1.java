@@ -7,6 +7,6 @@ final class Part1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new KeepAway(AdventOfCode.readStringFromInputTxt()).getLevelOfMonkeyBusiness());
+        AdventOfCode.printResultString(monkeys -> new KeepAway(monkeys).getLevelOfMonkeyBusiness());
     }
 }

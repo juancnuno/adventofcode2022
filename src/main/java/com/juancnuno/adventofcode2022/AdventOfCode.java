@@ -5,6 +5,7 @@ import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.function.Function;
+import java.util.function.ToIntFunction;
 import java.util.stream.Stream;
 
 public final class AdventOfCode {
@@ -19,9 +20,10 @@ public final class AdventOfCode {
         }
     }
 
-    public static String readStringFromInputTxt() {
+    public static void printResultString(ToIntFunction<String> function) {
         try {
-            return Files.readString(Path.of(System.getProperty("user.home"), "input.txt"));
+            var home = System.getProperty("user.home");
+            System.out.println(function.applyAsInt(Files.readString(Path.of(home, "input.txt"))));
         } catch (IOException exception) {
             throw new UncheckedIOException(exception);
         }

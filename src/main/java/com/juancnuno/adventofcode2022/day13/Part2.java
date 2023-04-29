@@ -29,6 +29,6 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Part2(AdventOfCode.readStringFromInputTxt()).getDecoderKey());
+        AdventOfCode.printResultString(packets -> new Part2(packets).getDecoderKey());
     }
 }

@@ -7,6 +7,6 @@ final class Part1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Scanner(AdventOfCode.readStringFromInputTxt()).getStartOfPacketMarkerPosition());
+        AdventOfCode.printResultString(buffer -> new Scanner(buffer).getStartOfPacketMarkerPosition());
     }
 }

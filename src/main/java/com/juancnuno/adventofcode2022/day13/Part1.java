@@ -30,6 +30,6 @@ final class Part1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Part1(AdventOfCode.readStringFromInputTxt()).getSum());
+        AdventOfCode.printResultString(pairs -> new Part1(pairs).getSum());
     }
 }
