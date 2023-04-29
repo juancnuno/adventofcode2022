@@ -7,6 +7,8 @@ final class Part1 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(rows -> new Pathfinder(new Heightmap(rows.toList())).getMinStepCountFromStartToEnd());
+        AdventOfCode.printResultStream(rows ->
+                new Pathfinder(new Heightmap(rows.toList())).getMinStepCountFromStartToEnd()
+        );
     }
 }

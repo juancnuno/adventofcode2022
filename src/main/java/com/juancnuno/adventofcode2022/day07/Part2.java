@@ -7,7 +7,7 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(lines -> {
+        AdventOfCode.printResultStream(lines -> {
             var filesystem = new Filesystem(lines);
             filesystem.handleLines();
 

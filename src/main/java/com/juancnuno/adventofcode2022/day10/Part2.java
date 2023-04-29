@@ -7,7 +7,7 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(instructions -> {
+        AdventOfCode.printResultStream(instructions -> {
             var device = new Device(instructions);
             device.runProgram();
 

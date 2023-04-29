@@ -12,7 +12,7 @@ public final class AdventOfCode {
     private AdventOfCode() {
     }
 
-    public static void printResult(Function<Stream<String>, Object> function) {
+    public static void printResultStream(Function<Stream<String>, Object> function) {
         try (var lines = Files.lines(Path.of(System.getProperty("user.home"), "input.txt"))) {
             System.out.println(function.apply(lines));
         } catch (IOException exception) {

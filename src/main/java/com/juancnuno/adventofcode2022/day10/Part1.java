@@ -7,6 +7,6 @@ final class Part1 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(instructions -> new Device(instructions).getSignalStrengthSum());
+        AdventOfCode.printResultStream(instructions -> new Device(instructions).getSignalStrengthSum());
     }
 }

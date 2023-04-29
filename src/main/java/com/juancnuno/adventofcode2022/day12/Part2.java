@@ -7,7 +7,7 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(stream -> {
+        AdventOfCode.printResultStream(stream -> {
             var list = stream.toList();
 
             return new Heightmap(list).squares()

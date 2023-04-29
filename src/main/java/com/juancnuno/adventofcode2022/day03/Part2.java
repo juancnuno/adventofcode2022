@@ -23,6 +23,6 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(items -> new Part2(items).getSumOfPriorities());
+        AdventOfCode.printResultStream(items -> new Part2(items).getSumOfPriorities());
     }
 }

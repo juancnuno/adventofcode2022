@@ -28,6 +28,6 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(motions -> new Part2(motions).getPositionCount());
+        AdventOfCode.printResultStream(motions -> new Part2(motions).getPositionCount());
     }
 }

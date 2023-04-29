@@ -35,7 +35,7 @@ final class Part2 {
         // noinspection SpellCheckingInspection
         stacks.add(8, "MCLGVRT");
 
-        AdventOfCode.printResult(lines -> {
+        AdventOfCode.printResultStream(lines -> {
             lines
                     .map(Step::new)
                     .forEach(stacks::move);

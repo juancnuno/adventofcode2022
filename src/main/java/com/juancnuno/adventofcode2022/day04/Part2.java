@@ -19,6 +19,6 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(pairs -> new Part2(pairs).getCount());
+        AdventOfCode.printResultStream(pairs -> new Part2(pairs).getCount());
     }
 }

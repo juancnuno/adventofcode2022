@@ -19,6 +19,6 @@ final class Part2 {
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResult(lines -> new Part2(lines).getTotalScore());
+        AdventOfCode.printResultStream(lines -> new Part2(lines).getTotalScore());
     }
 }
