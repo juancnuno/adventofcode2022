@@ -1,8 +1,7 @@
 package com.juancnuno.adventofcode2022.day09;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
+
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.stream.Stream;
@@ -28,9 +27,7 @@ final class Part1 {
         return positions.size();
     }
 
-    public static void main(String[] args) throws IOException {
-        try (var motions = Files.lines(Path.of(args[0]))) {
-            System.out.println(new Part1(motions).getPositionCount());
-        }
+    public static void main(String[] args) {
+        AdventOfCode.printResult(motions -> new Part1(motions).getPositionCount());
     }
 }

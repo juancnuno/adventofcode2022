@@ -1,14 +1,12 @@
 package com.juancnuno.adventofcode2022.day05;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
 
 final class Part1 {
     private Part1() {
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Stacks stacks = new Stacks(9);
 
         // noinspection SpellCheckingInspection
@@ -37,12 +35,12 @@ final class Part1 {
         // noinspection SpellCheckingInspection
         stacks.add(8, "MCLGVRT");
 
-        try (var lines = Files.lines(Path.of(args[0]))) {
+        AdventOfCode.printResult(lines -> {
             lines
                     .map(Step::new)
                     .forEach(step -> step.moveCrates(stacks));
-        }
 
-        System.out.println(stacks.getTopCrates());
+            return stacks.getTopCrates();
+        });
     }
 }

@@ -1,8 +1,7 @@
 package com.juancnuno.adventofcode2022.day04;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
+
 import java.util.stream.Stream;
 
 final class Part1 {
@@ -19,9 +18,7 @@ final class Part1 {
                 .count();
     }
 
-    public static void main(String[] args) throws IOException {
-        try (var lines = Files.lines(Path.of(args[0]))) {
-            System.out.println(new Part1(lines).getCount());
-        }
+    public static void main(String[] args) {
+        AdventOfCode.printResult(pairs -> new Part1(pairs).getCount());
     }
 }

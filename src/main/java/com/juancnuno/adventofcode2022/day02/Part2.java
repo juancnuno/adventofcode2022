@@ -1,8 +1,7 @@
 package com.juancnuno.adventofcode2022.day02;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
+
 import java.util.stream.Stream;
 
 final class Part2 {
@@ -19,9 +18,7 @@ final class Part2 {
                 .sum();
     }
 
-    public static void main(String[] args) throws IOException {
-        try (var lines = Files.lines(Path.of(args[0]))) {
-            System.out.println(new Part2(lines).getTotalScore());
-        }
+    public static void main(String[] args) {
+        AdventOfCode.printResult(lines -> new Part2(lines).getTotalScore());
     }
 }

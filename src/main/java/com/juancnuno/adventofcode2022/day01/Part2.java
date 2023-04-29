@@ -1,8 +1,7 @@
 package com.juancnuno.adventofcode2022.day01;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.juancnuno.adventofcode2022.AdventOfCode;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -39,9 +38,7 @@ final class Part2 {
         return i.next() + i.next() + i.next();
     }
 
-    public static void main(String[] args) throws IOException {
-        try (var lines = Files.lines(Path.of(args[0]))) {
-            System.out.println(new Part2(lines).getSumOfThreeHighestCalorieCounts());
-        }
+    public static void main(String[] args) {
+        AdventOfCode.printResult(lines -> new Part2(lines).getSumOfThreeHighestCalorieCounts());
     }
 }
