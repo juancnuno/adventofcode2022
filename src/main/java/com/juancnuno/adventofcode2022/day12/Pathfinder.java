@@ -4,23 +4,23 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-final class Pathfinder {
+public final class Pathfinder {
     private final Heightmap heightmap;
     private final Square start;
 
     private SortedSet<Square> unvisitedSquares;
     private Square currentSquare;
 
-    Pathfinder(Heightmap heightmap) {
+    public Pathfinder(Heightmap heightmap) {
         this(heightmap, heightmap.find(Square::isStart));
     }
 
-    Pathfinder(Heightmap heightmap, Square start) {
+    public Pathfinder(Heightmap heightmap, Square start) {
         this.heightmap = heightmap;
         this.start = start;
     }
 
-    int getMinStepCountFromStartToEnd() {
+    public int getMinStepCountFromStartToEnd() {
         unvisitedSquares = heightmap.squares().collect(Collectors.toCollection(TreeSet::new));
 
         unvisitedSquares.remove(start);

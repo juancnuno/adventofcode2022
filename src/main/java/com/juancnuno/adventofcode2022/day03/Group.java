@@ -2,14 +2,14 @@ package com.juancnuno.adventofcode2022.day03;
 
 import java.util.stream.Stream;
 
-final class Group {
+public final class Group {
     private final Stream<String> items;
 
-    Group(Stream<String> items) {
+    public Group(Stream<String> items) {
         this.items = items;
     }
 
-    Item getItemInAllRucksacks() {
+    public Item getItemInAllRucksacks() {
         var i = items
                 .map(Rucksack::new)
                 .iterator();

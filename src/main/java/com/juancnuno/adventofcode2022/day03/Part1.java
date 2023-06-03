@@ -4,14 +4,14 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 
 import java.util.stream.Stream;
 
-final class Part1 {
+public final class Part1 {
     private final Stream<String> items;
 
-    Part1(Stream<String> items) {
+    public Part1(Stream<String> items) {
         this.items = items;
     }
 
-    int getSumOfPriorities() {
+    public int getSumOfPriorities() {
         return items
                 .map(Rucksack::new)
                 .map(Rucksack::getItemInBothCompartments)

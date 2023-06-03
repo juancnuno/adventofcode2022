@@ -7,11 +7,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
-final class Part2 {
+public final class Part2 {
     private int currentCalorieCount;
     private final List<Integer> calorieCounts;
 
-    Part2(Stream<String> lines) {
+    public Part2(Stream<String> lines) {
         calorieCounts = new ArrayList<>();
 
         lines.forEach(this::handleLine);
@@ -31,7 +31,7 @@ final class Part2 {
         currentCalorieCount = 0;
     }
 
-    int getSumOfThreeHighestCalorieCounts() {
+    public int getSumOfThreeHighestCalorieCounts() {
         calorieCounts.sort(Comparator.reverseOrder());
 
         var i = calorieCounts.iterator();

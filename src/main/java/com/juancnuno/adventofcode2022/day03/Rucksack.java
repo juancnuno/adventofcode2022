@@ -3,14 +3,14 @@ package com.juancnuno.adventofcode2022.day03;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-final class Rucksack {
+public final class Rucksack {
     private final String items;
 
-    Rucksack(String items) {
+    public Rucksack(String items) {
         this.items = items;
     }
 
-    Item getItemInBothCompartments() {
+    public Item getItemInBothCompartments() {
         var length = items.length() / 2;
         return findFirstItem(toSet(items.substring(length)), toSet(items.substring(0, length)));
     }

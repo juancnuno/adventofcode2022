@@ -1,17 +1,17 @@
 package com.juancnuno.adventofcode2022.day06;
 
-final class Scanner {
+public final class Scanner {
     private final CharSequence buffer;
 
-    Scanner(CharSequence buffer) {
+    public Scanner(CharSequence buffer) {
         this.buffer = buffer;
     }
 
-    int getStartOfPacketMarkerPosition() {
+    public int getStartOfPacketMarkerPosition() {
         return getMarkerPosition(4);
     }
 
-    int getStartOfMessageMarkerPosition() {
+    public int getStartOfMessageMarkerPosition() {
         return getMarkerPosition(14);
     }
 

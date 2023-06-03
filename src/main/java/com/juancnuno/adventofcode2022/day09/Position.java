@@ -1,6 +1,6 @@
 package com.juancnuno.adventofcode2022.day09;
 
-record Position(int rowIndex, int columnIndex) {
+public record Position(int rowIndex, int columnIndex) {
     Position() {
         this(0, 0);
     }

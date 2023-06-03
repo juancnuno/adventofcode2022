@@ -6,12 +6,12 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.stream.Stream;
 
-final class Part2 {
+public final class Part2 {
     private final Stream<String> motions;
-    final Rope rope;
+    public final Rope rope;
     private final Collection<Position> positions;
 
-    Part2(Stream<String> motions) {
+    public Part2(Stream<String> motions) {
         this.motions = motions;
         rope = new Rope(10);
 
@@ -19,7 +19,7 @@ final class Part2 {
         positions.add(rope.getTail().getPosition());
     }
 
-    int getPositionCount() {
+    public int getPositionCount() {
         motions
                 .map(Motion::parse)
                 .forEach(motion -> motion.move(rope, positions));

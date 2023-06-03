@@ -3,7 +3,7 @@ package com.juancnuno.adventofcode2022.day08;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-final class Tree {
+public final class Tree {
     private final int height;
     private final int rowIndex;
     private final int columnIndex;
@@ -50,7 +50,7 @@ final class Tree {
         return row.subList(columnIndex + 1, row.size()).stream();
     }
 
-    int getScenicScore() {
+    public int getScenicScore() {
         return getTopViewingDistance() * getBottomViewingDistance() * getLeftViewingDistance()
                 * getRightViewingDistance();
     }

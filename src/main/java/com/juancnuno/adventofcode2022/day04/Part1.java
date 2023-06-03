@@ -4,14 +4,14 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 
 import java.util.stream.Stream;
 
-final class Part1 {
+public final class Part1 {
     private final Stream<String> pairs;
 
-    Part1(Stream<String> pairs) {
+    public Part1(Stream<String> pairs) {
         this.pairs = pairs;
     }
 
-    int getCount() {
+    public int getCount() {
         return (int) pairs
                 .map(RangePair::new)
                 .filter(RangePair::oneRangeContainsOther)

@@ -4,14 +4,14 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 
 import java.util.stream.Stream;
 
-final class Part2 {
+public final class Part2 {
     private final Stream<String> pairs;
 
-    Part2(Stream<String> pairs) {
+    public Part2(Stream<String> pairs) {
         this.pairs = pairs;
     }
 
-    int getCount() {
+    public int getCount() {
         return (int) pairs
                 .map(RangePair::new)
                 .filter(pair -> pair.getRange1().overlaps(pair.getRange2()))

@@ -3,7 +3,7 @@ package com.juancnuno.adventofcode2022.day10;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
-final class Device {
+public final class Device {
     private final Crt crt;
     private final Cpu cpu;
     private final Iterator<Instruction> instructions;
@@ -12,7 +12,7 @@ final class Device {
     private int cycle;
     private int sum;
 
-    Device(Stream<String> instructions) {
+    public Device(Stream<String> instructions) {
         cpu = new Cpu();
         crt = new Crt();
 
@@ -23,13 +23,13 @@ final class Device {
         current = this.instructions.next();
     }
 
-    void runProgram() {
+    public void runProgram() {
         while (current != null) {
             tick();
         }
     }
 
-    void tick() {
+    public void tick() {
         cycle++;
 
         if (current == null) {
@@ -60,15 +60,15 @@ final class Device {
         }
     }
 
-    Object getCrt() {
+    public Object getCrt() {
         return crt;
     }
 
-    Cpu getCpu() {
+    public Cpu getCpu() {
         return cpu;
     }
 
-    int getSignalStrengthSum() {
+    public int getSignalStrengthSum() {
         return sum;
     }
 }

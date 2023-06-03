@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Stream;
 
-final class Directory extends File {
+public final class Directory extends File {
     private final Collection<File> files;
 
     Directory() {
@@ -28,7 +28,7 @@ final class Directory extends File {
         return (Directory) directory.orElseThrow();
     }
 
-    Stream<File> directories() {
+    public Stream<File> directories() {
         var directories = Stream.<File>builder();
         addThisAndChildDirectories(directories);
 
@@ -45,7 +45,7 @@ final class Directory extends File {
     }
 
     @Override
-    int getTotalSize() {
+    public int getTotalSize() {
         return files.stream()
                 .mapToInt(File::getTotalSize)
                 .sum();

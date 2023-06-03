@@ -3,13 +3,13 @@ package com.juancnuno.adventofcode2022.day04;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-final class Range {
+public final class Range {
     private static final Pattern PATTERN = Pattern.compile("(\\d+)-(\\d+)");
 
     private final int min;
     private final int max;
 
-    Range(String range) {
+    public Range(String range) {
         Matcher matcher = PATTERN.matcher(range);
 
         if (!matcher.matches()) {
@@ -20,11 +20,11 @@ final class Range {
         max = Integer.parseInt(matcher.group(2));
     }
 
-    boolean contains(Range range) {
+    public boolean contains(Range range) {
         return min <= range.min && range.max <= max;
     }
 
-    boolean overlaps(Range range) {
+    public boolean overlaps(Range range) {
         if (max < range.min) {
             return false;
         }

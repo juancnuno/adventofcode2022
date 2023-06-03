@@ -3,13 +3,13 @@ package com.juancnuno.adventofcode2022.day04;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-final class RangePair {
+public final class RangePair {
     private static final Pattern PATTERN = Pattern.compile("(\\d+-\\d+),(\\d+-\\d+)");
 
     private final Range range1;
     private final Range range2;
 
-    RangePair(String pair) {
+    public RangePair(String pair) {
         Matcher matcher = PATTERN.matcher(pair);
 
         if (!matcher.matches()) {
@@ -20,7 +20,7 @@ final class RangePair {
         range2 = new Range(matcher.group(2));
     }
 
-    boolean oneRangeContainsOther() {
+    public boolean oneRangeContainsOther() {
         return range1.contains(range2) || range2.contains(range1);
     }
 

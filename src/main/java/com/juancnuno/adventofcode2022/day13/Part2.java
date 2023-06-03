@@ -5,14 +5,14 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-final class Part2 {
+public final class Part2 {
     private final String packets;
 
-    Part2(String packets) {
+    public Part2(String packets) {
         this.packets = packets;
     }
 
-    int getDecoderKey() {
+    public int getDecoderKey() {
         var packets = this.packets.lines()
                 .filter(Predicate.not(CharSequence::isEmpty))
                 .map(Element::parse)

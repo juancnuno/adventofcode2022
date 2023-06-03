@@ -5,16 +5,16 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.IntStream;
 
-final class KeepAway {
+public final class KeepAway {
     private final List<Monkey> monkeys;
 
-    KeepAway(String monkeys) {
+    public KeepAway(String monkeys) {
         this.monkeys = Arrays.stream(monkeys.split("(?m)^\n"))
                 .map(Monkey::parseMonkey)
                 .toList();
     }
 
-    int getLevelOfMonkeyBusiness() {
+    public int getLevelOfMonkeyBusiness() {
         IntStream.range(0, 20).forEach(i -> playRound());
 
         var level = monkeys.stream()

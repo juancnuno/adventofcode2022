@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-final class Filesystem {
+public final class Filesystem {
     private static final Pattern LS_OUTPUT_LINE = Pattern.compile("(\\d+) (.+)");
 
     private final Stream<String> lines;
@@ -12,12 +12,12 @@ final class Filesystem {
 
     private Directory current;
 
-    Filesystem(Stream<String> lines) {
+    public Filesystem(Stream<String> lines) {
         this.lines = lines;
         root = new Directory();
     }
 
-    void handleLines() {
+    public void handleLines() {
         lines.forEach(this::handleLine);
     }
 
@@ -57,7 +57,7 @@ final class Filesystem {
         current.addFile(new File(matcher.group(2), Integer.parseInt(matcher.group(1)), current));
     }
 
-    Directory getRoot() {
+    public Directory getRoot() {
         return root;
     }
 }

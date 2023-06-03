@@ -1,6 +1,6 @@
 package com.juancnuno.adventofcode2022.day07;
 
-class File {
+public class File {
     final Object name;
     private final int size;
     private final Directory parent;
@@ -11,7 +11,7 @@ class File {
         this.parent = parent;
     }
 
-    int getTotalSize() {
+    public int getTotalSize() {
         return size;
     }
 

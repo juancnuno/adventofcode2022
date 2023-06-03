@@ -4,14 +4,14 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 
 import java.util.stream.Stream;
 
-final class Part2 {
+public final class Part2 {
     private final Stream<String> lines;
 
-    Part2(Stream<String> lines) {
+    public Part2(Stream<String> lines) {
         this.lines = lines;
     }
 
-    int getTotalScore() {
+    public int getTotalScore() {
         return lines
                 .map(Round2::new)
                 .mapToInt(Round2::getScore)

@@ -1,13 +1,13 @@
 package com.juancnuno.adventofcode2022.day09;
 
-final class Knot {
+public final class Knot {
     private Position position;
 
     Knot() {
         this(new Position());
     }
 
-    Knot(Position position) {
+    public Knot(Position position) {
         this.position = position;
     }
 
@@ -16,7 +16,7 @@ final class Knot {
                 && Math.abs(position.columnIndex() - knot.position.columnIndex()) < 2;
     }
 
-    void keepUpWith(Knot knot) {
+    public void keepUpWith(Knot knot) {
         var rowIndex = position.rowIndex();
         var knotRowIndex = knot.position.rowIndex();
         var columnIndex = position.columnIndex();
@@ -65,7 +65,7 @@ final class Knot {
         position = position.incrementColumnIndex();
     }
 
-    Position getPosition() {
+    public Position getPosition() {
         return position;
     }
 }

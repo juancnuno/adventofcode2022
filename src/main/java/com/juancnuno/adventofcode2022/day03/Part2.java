@@ -6,14 +6,14 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 import java.util.Collection;
 import java.util.stream.Stream;
 
-final class Part2 {
+public final class Part2 {
     private final Stream<String> items;
 
-    Part2(Stream<String> items) {
+    public Part2(Stream<String> items) {
         this.items = items;
     }
 
-    int getSumOfPriorities() {
+    public int getSumOfPriorities() {
         return Lists.partition(items.toList(), 3).stream()
                 .map(Collection::stream)
                 .map(Group::new)

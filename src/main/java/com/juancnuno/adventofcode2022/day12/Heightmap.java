@@ -7,10 +7,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-final class Heightmap {
+public final class Heightmap {
     private final List<List<Square>> rows;
 
-    Heightmap(List<String> rows) {
+    public Heightmap(List<String> rows) {
         this.rows = IntStream.range(0, rows.size())
                 .mapToObj(rowIndex -> toRow(rows.get(rowIndex), rowIndex))
                 .toList();
@@ -34,7 +34,7 @@ final class Heightmap {
         return square.orElseThrow();
     }
 
-    Stream<Square> squares() {
+    public Stream<Square> squares() {
         return rows.stream().flatMap(Collection::stream);
     }
 

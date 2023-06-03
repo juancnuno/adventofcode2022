@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Stream;
 
-final class Rope {
+public final class Rope {
     private final List<Knot> knots;
 
     Rope(int length) {

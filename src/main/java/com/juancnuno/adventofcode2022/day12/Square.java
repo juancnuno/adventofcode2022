@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-record Square(char elevation, int rowIndex, int columnIndex, int distance) implements Comparable<Square> {
+public record Square(char elevation, int rowIndex, int columnIndex, int distance) implements Comparable<Square> {
 
     private static final Comparator<Square> COMPARATOR = Comparator.comparing(Square::distance)
             .thenComparing(Square::elevation)
@@ -20,7 +20,7 @@ record Square(char elevation, int rowIndex, int columnIndex, int distance) imple
         return elevation == 'E';
     }
 
-    boolean isLow() {
+    public boolean isLow() {
         return elevation == 'S' || elevation == 'a';
     }
 

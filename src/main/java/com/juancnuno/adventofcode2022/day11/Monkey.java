@@ -6,7 +6,7 @@ import java.util.function.IntPredicate;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-final class Monkey {
+public final class Monkey {
     private static final Pattern PATTERN = Pattern.compile("""
             Monkey (\\d):
               Starting items: (.+)
@@ -34,7 +34,7 @@ final class Monkey {
         idToThrowToIfPredicateDoesntMatch = builder.idToThrowToIfPredicateDoesntMatch;
     }
 
-    static Monkey parseMonkey(String string) {
+    public static Monkey parseMonkey(String string) {
         var matcher = PATTERN.matcher(string);
 
         if (!matcher.matches()) {
@@ -57,7 +57,7 @@ final class Monkey {
                 .collect(Collectors.toList());
     }
 
-    static final class Builder {
+    public static final class Builder {
         private int id;
         private List<Integer> startingItems;
         private Operation operation;
@@ -65,37 +65,37 @@ final class Monkey {
         private int idToThrowToIfPredicateMatches;
         private int idToThrowToIfPredicateDoesntMatch;
 
-        Builder setId(int id) {
+        public Builder setId(int id) {
             this.id = id;
             return this;
         }
 
-        Builder setStartingItems(List<Integer> startingItems) {
+        public Builder setStartingItems(List<Integer> startingItems) {
             this.startingItems = startingItems;
             return this;
         }
 
-        Builder setOperation(Operation operation) {
+        public Builder setOperation(Operation operation) {
             this.operation = operation;
             return this;
         }
 
-        Builder setPredicate(IntPredicate predicate) {
+        public Builder setPredicate(IntPredicate predicate) {
             this.predicate = predicate;
             return this;
         }
 
-        Builder setIdToThrowToIfPredicateMatches(int idToThrowToIfPredicateMatches) {
+        public Builder setIdToThrowToIfPredicateMatches(int idToThrowToIfPredicateMatches) {
             this.idToThrowToIfPredicateMatches = idToThrowToIfPredicateMatches;
             return this;
         }
 
-        Builder setIdToThrowToIfPredicateDoesntMatch(int idToThrowToIfPredicateDoesntMatch) {
+        public Builder setIdToThrowToIfPredicateDoesntMatch(int idToThrowToIfPredicateDoesntMatch) {
             this.idToThrowToIfPredicateDoesntMatch = idToThrowToIfPredicateDoesntMatch;
             return this;
         }
 
-        Monkey build() {
+        public Monkey build() {
             return new Monkey(this);
         }
     }

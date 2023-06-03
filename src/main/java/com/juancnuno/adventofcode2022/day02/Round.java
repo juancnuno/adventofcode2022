@@ -1,10 +1,10 @@
 package com.juancnuno.adventofcode2022.day02;
 
-final class Round {
+public final class Round {
     private final OpponentsPlay opponentsPlay;
     private final YourPlay yourPlay;
 
-    Round(String line) {
+    public Round(String line) {
         opponentsPlay = OpponentsPlay.valueOf(line.substring(0, 1));
         yourPlay = YourPlay.valueOf(line.substring(2, 3));
     }
@@ -13,11 +13,11 @@ final class Round {
         return yourPlay.getScore() + Outcome.get(opponentsPlay, yourPlay).getScore();
     }
 
-    Object getOpponentsPlay() {
+    public Object getOpponentsPlay() {
         return opponentsPlay;
     }
 
-    Object getYourPlay() {
+    public Object getYourPlay() {
         return yourPlay;
     }
 }

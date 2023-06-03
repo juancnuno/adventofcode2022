@@ -5,14 +5,14 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-final class Part1 {
+public final class Part1 {
     private final String pairs;
 
-    Part1(String pairs) {
+    public Part1(String pairs) {
         this.pairs = pairs;
     }
 
-    int getSum() {
+    public int getSum() {
         var pairs = this.pairs.split("(?m)^\n");
 
         return IntStream.range(0, pairs.length)

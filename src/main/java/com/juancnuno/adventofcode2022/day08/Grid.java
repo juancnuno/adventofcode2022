@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-final class Grid {
+public final class Grid {
     private final List<List<Tree>> rows;
 
-    Grid(List<String> lines) {
+    public Grid(List<String> lines) {
         rows = IntStream.range(0, lines.size())
                 .mapToObj(rowIndex -> toRow(lines.get(rowIndex), rowIndex))
                 .toList();
@@ -26,17 +26,17 @@ final class Grid {
         return new Tree(height, rowIndex, columnIndex, this);
     }
 
-    List<List<Tree>> getRows() {
+    public List<List<Tree>> getRows() {
         return rows;
     }
 
-    int getVisibleTreeCount() {
+    public int getVisibleTreeCount() {
         return (int) trees()
                 .filter(Tree::isVisible)
                 .count();
     }
 
-    int getMaxScenicScore() {
+    public int getMaxScenicScore() {
         var score = trees()
                 .mapToInt(Tree::getScenicScore)
                 .max();

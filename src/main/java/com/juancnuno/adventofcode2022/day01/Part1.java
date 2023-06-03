@@ -4,11 +4,11 @@ import com.juancnuno.adventofcode2022.AdventOfCode;
 
 import java.util.stream.Stream;
 
-final class Part1 {
+public final class Part1 {
     private int currentCalorieCount;
     private int maxCalorieCount;
 
-    Part1(Stream<String> lines) {
+    public Part1(Stream<String> lines) {
         lines.forEach(this::handleLine);
         setMaxIfMaxIsLessThanCurrent();
     }
@@ -29,7 +29,7 @@ final class Part1 {
         currentCalorieCount = 0;
     }
 
-    int getMexCalorieCount() {
+    public int getMexCalorieCount() {
         return maxCalorieCount;
     }
 
