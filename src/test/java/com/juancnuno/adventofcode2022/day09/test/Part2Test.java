@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class Part2Test {
-    private Part2Test() {
-    }
-
+public final class Part2Test {
     @Test
-    void getPositionCount1() {
+    public void getPositionCount1() {
         // Arrange
         var input = """
                 R 4
@@ -30,7 +27,7 @@ final class Part2Test {
     }
 
     @Test
-    void getPositionCount2() {
+    public void getPositionCount2() {
         // Arrange
         var input = """
                 R 4
@@ -52,7 +49,7 @@ final class Part2Test {
     }
 
     @Test
-    void getPositionCount3() {
+    public void getPositionCount3() {
         // Arrange
         var input = """
                 R 4
@@ -75,7 +72,7 @@ final class Part2Test {
     }
 
     @Test
-    void getPositionCount4() {
+    public void getPositionCount4() {
         // Arrange
         var input = """
                 R 5

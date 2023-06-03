@@ -7,12 +7,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class RoundTest {
-    private RoundTest() {
-    }
-
+public final class RoundTest {
     @Test
-    void round() {
+    public void round() {
         // Act
         var round = new Round("A Y");
 

@@ -9,12 +9,9 @@ import java.util.OptionalInt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class PathfinderTest {
-    private PathfinderTest() {
-    }
-
+public final class PathfinderTest {
     @Test
-    void getMinStepCountFromStartToEnd1() {
+    public void getMinStepCountFromStartToEnd1() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var input = """
@@ -35,7 +32,7 @@ final class PathfinderTest {
     }
 
     @Test
-    void getMinStepCountFromStartToEnd2() {
+    public void getMinStepCountFromStartToEnd2() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var input = """

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class GridTest {
+public final class GridTest {
     private static final String STRING = """
             30373
             25512
@@ -16,11 +16,8 @@ final class GridTest {
 
     private final Grid grid = new Grid(STRING.lines().toList());
 
-    private GridTest() {
-    }
-
     @Test
-    void getVisibleTreeCount() {
+    public void getVisibleTreeCount() {
         // Act
         var count = grid.getVisibleTreeCount();
 
@@ -29,7 +26,7 @@ final class GridTest {
     }
 
     @Test
-    void getScenicScore1() {
+    public void getScenicScore1() {
         // Arrange
         var tree = grid.getRows().get(1).get(2);
 
@@ -41,7 +38,7 @@ final class GridTest {
     }
 
     @Test
-    void getScenicScore2() {
+    public void getScenicScore2() {
         // Arrange
         var tree = grid.getRows().get(3).get(2);
 
@@ -53,7 +50,7 @@ final class GridTest {
     }
 
     @Test
-    void getMaxScenicScore() {
+    public void getMaxScenicScore() {
         // Act
         var score = grid.getMaxScenicScore();
 

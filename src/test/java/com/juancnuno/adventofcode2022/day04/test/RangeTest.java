@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-final class RangeTest {
-    private RangeTest() {
-    }
-
+public final class RangeTest {
     @Test
-    void contains1() {
+    public void contains1() {
         // Arrange
         var range1 = new Range("2-8");
         var range2 = new Range("3-7");
@@ -23,7 +20,7 @@ final class RangeTest {
     }
 
     @Test
-    void contains2() {
+    public void contains2() {
         // Arrange
         var range1 = new Range("4-6");
         var range2 = new Range("6-6");
@@ -36,7 +33,7 @@ final class RangeTest {
     }
 
     @Test
-    void overlaps1() {
+    public void overlaps1() {
         // Arrange
         var range1 = new Range("5-7");
         var range2 = new Range("7-9");
@@ -49,7 +46,7 @@ final class RangeTest {
     }
 
     @Test
-    void overlaps2() {
+    public void overlaps2() {
         // Arrange
         var range1 = new Range("2-8");
         var range2 = new Range("3-7");
@@ -62,7 +59,7 @@ final class RangeTest {
     }
 
     @Test
-    void overlaps3() {
+    public void overlaps3() {
         // Arrange
         var range1 = new Range("6-6");
         var range2 = new Range("4-6");
@@ -75,7 +72,7 @@ final class RangeTest {
     }
 
     @Test
-    void overlaps4() {
+    public void overlaps4() {
         // Arrange
         var range1 = new Range("2-6");
         var range2 = new Range("4-8");

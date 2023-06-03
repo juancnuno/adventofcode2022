@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class Part2Test {
-    private Part2Test() {
-    }
-
+public final class Part2Test {
     @Test
-    void getSumOfPriorities() {
+    public void getSumOfPriorities() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var part2 = new Part2("""

@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class Part1Test {
-    private Part1Test() {
-    }
-
+public final class Part1Test {
     @Test
-    void getTotalScore() {
+    public void getTotalScore() {
         // Arrange
         var part1 = new Part1("""
                 A Y

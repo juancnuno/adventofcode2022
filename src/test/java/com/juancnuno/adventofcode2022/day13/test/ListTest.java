@@ -6,12 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-final class ListTest {
-    private ListTest() {
-    }
-
+public final class ListTest {
     @Test
-    void compareTo1() {
+    public void compareTo1() {
         // Arrange
         var element1 = Element.parse("[1,1,3,1,1]");
         var element2 = Element.parse("[1,1,5,1,1]");
@@ -24,7 +21,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo2() {
+    public void compareTo2() {
         // Arrange
         var element1 = Element.parse("[[1],[2,3,4]]");
         var element2 = Element.parse("[[1],4]");
@@ -37,7 +34,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo3() {
+    public void compareTo3() {
         // Arrange
         var element1 = Element.parse("[9]");
         var element2 = Element.parse("[[8,7,6]]");
@@ -50,7 +47,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo4() {
+    public void compareTo4() {
         // Arrange
         var element1 = Element.parse("[[4,4],4,4]");
         var element2 = Element.parse("[[4,4],4,4,4]");
@@ -63,7 +60,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo5() {
+    public void compareTo5() {
         // Arrange
         var element1 = Element.parse("[7,7,7,7]");
         var element2 = Element.parse("[7,7,7]");
@@ -76,7 +73,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo6() {
+    public void compareTo6() {
         // Arrange
         var element1 = Element.parse("[]");
         var element2 = Element.parse("[3]");
@@ -89,7 +86,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo7() {
+    public void compareTo7() {
         // Arrange
         var element1 = Element.parse("[[[]]]");
         var element2 = Element.parse("[[]]");
@@ -102,7 +99,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo8() {
+    public void compareTo8() {
         // Arrange
         var element1 = Element.parse("[1,[2,[3,[4,[5,6,7]]]],8,9]");
         var element2 = Element.parse("[1,[2,[3,[4,[5,6,0]]]],8,9]");
@@ -115,7 +112,7 @@ final class ListTest {
     }
 
     @Test
-    void compareTo9() {
+    public void compareTo9() {
         // Arrange
         var element1 = Element.parse("[1,1,3,1,1]");
         var element2 = Element.parse("[1,1,3,1,1]");

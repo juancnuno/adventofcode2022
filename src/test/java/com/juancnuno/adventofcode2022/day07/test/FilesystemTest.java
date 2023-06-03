@@ -9,10 +9,10 @@ import java.util.OptionalInt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class FilesystemTest {
+public final class FilesystemTest {
     private final Directory root;
 
-    private FilesystemTest() {
+    public FilesystemTest() {
         var filesystem = new Filesystem("""
                 $ cd /
                 $ ls
@@ -44,7 +44,7 @@ final class FilesystemTest {
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         // Act
         var actual = root.toString();
 
@@ -70,7 +70,7 @@ final class FilesystemTest {
     }
 
     @Test
-    void getTotalSize1() {
+    public void getTotalSize1() {
         // Act
         var sum = root.directories()
                 .mapToInt(File::getTotalSize)
@@ -82,7 +82,7 @@ final class FilesystemTest {
     }
 
     @Test
-    void getTotalSize2() {
+    public void getTotalSize2() {
         // Act
         var unusedSpace = 70_000_000 - root.getTotalSize();
         var neededSpace = 30_000_000 - unusedSpace;

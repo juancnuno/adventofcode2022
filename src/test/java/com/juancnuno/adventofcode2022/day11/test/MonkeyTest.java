@@ -9,12 +9,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class MonkeyTest {
-    private MonkeyTest() {
-    }
-
+public final class MonkeyTest {
     @Test
-    void parseMonkey() {
+    public void parseMonkey() {
         // Arrange
         var string = """
                 Monkey 0:

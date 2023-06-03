@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class Part2Test {
-    private Part2Test() {
-    }
-
+public final class Part2Test {
     @Test
-    void getDecoderKey() {
+    public void getDecoderKey() {
         // Arrange
         var part2 = new Part2("""
                 [1,1,3,1,1]

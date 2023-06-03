@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class KeepAwayTest {
-    private KeepAwayTest() {
-    }
-
+public final class KeepAwayTest {
     @Test
-    void getLevelOfMonkeyBusiness() {
+    public void getLevelOfMonkeyBusiness() {
         // Arrange
         var monkeys = """
                 Monkey 0:

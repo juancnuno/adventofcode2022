@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class ElementTest {
-    private ElementTest() {
-    }
-
+public final class ElementTest {
     @Test
-    void parse1() {
+    public void parse1() {
         // Act
         var element = Element.parse("[1,1,3,1,1]");
 
@@ -19,7 +16,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse2() {
+    public void parse2() {
         // Act
         var element = Element.parse("[1,1,5,1,1]");
 
@@ -28,7 +25,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse3() {
+    public void parse3() {
         // Act
         var element = Element.parse("[[1],[2,3,4]]");
 
@@ -37,7 +34,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse4() {
+    public void parse4() {
         // Act
         var element = Element.parse("[[1],4]");
 
@@ -46,7 +43,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse5() {
+    public void parse5() {
         // Act
         var element = Element.parse("[9]");
 
@@ -55,7 +52,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse6() {
+    public void parse6() {
         // Act
         var element = Element.parse("[[8,7,6]]");
 
@@ -64,7 +61,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse7() {
+    public void parse7() {
         // Act
         var element = Element.parse("[[4,4],4,4]");
 
@@ -73,7 +70,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse8() {
+    public void parse8() {
         // Act
         var element = Element.parse("[[4,4],4,4,4]");
 
@@ -82,7 +79,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse9() {
+    public void parse9() {
         // Act
         var element = Element.parse("[7,7,7,7]");
 
@@ -91,7 +88,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse10() {
+    public void parse10() {
         // Act
         var element = Element.parse("[7,7,7]");
 
@@ -100,7 +97,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse11() {
+    public void parse11() {
         // Act
         var element = Element.parse("[]");
 
@@ -109,7 +106,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse12() {
+    public void parse12() {
         // Act
         var element = Element.parse("[3]");
 
@@ -118,7 +115,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse13() {
+    public void parse13() {
         // Act
         var element = Element.parse("[[[]]]");
 
@@ -127,7 +124,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse14() {
+    public void parse14() {
         // Act
         var element = Element.parse("[[]]");
 
@@ -136,7 +133,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse15() {
+    public void parse15() {
         // Act
         var element = Element.parse("[1,[2,[3,[4,[5,6,7]]]],8,9]");
 
@@ -145,7 +142,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse16() {
+    public void parse16() {
         // Act
         var element = Element.parse("[1,[2,[3,[4,[5,6,0]]]],8,9]");
 
@@ -154,7 +151,7 @@ final class ElementTest {
     }
 
     @Test
-    void parse17() {
+    public void parse17() {
         // Act
         var element = Element.parse("[[[],[],8,3],[10]]");
 

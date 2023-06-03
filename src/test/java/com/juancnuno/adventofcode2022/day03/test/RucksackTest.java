@@ -6,12 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class RucksackTest {
-    private RucksackTest() {
-    }
-
+public final class RucksackTest {
     @Test
-    void getItemInBothCompartments1() {
+    public void getItemInBothCompartments1() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var rucksack = new Rucksack("vJrwpWtwJgWrhcsFMMfFFhFp");
@@ -24,7 +21,7 @@ final class RucksackTest {
     }
 
     @Test
-    void getItemInBothCompartments2() {
+    public void getItemInBothCompartments2() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var rucksack = new Rucksack("jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL");
@@ -37,7 +34,7 @@ final class RucksackTest {
     }
 
     @Test
-    void getItemInBothCompartments3() {
+    public void getItemInBothCompartments3() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var rucksack = new Rucksack("PmmdzqPrVvPwwTWBwg");
@@ -50,7 +47,7 @@ final class RucksackTest {
     }
 
     @Test
-    void getItemInBothCompartments4() {
+    public void getItemInBothCompartments4() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var rucksack = new Rucksack("wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn");
@@ -63,7 +60,7 @@ final class RucksackTest {
     }
 
     @Test
-    void getItemInBothCompartments5() {
+    public void getItemInBothCompartments5() {
         // Arrange
         var rucksack = new Rucksack("ttgJtRGJQctTZtZT");
 
@@ -75,7 +72,7 @@ final class RucksackTest {
     }
 
     @Test
-    void getItemInBothCompartments6() {
+    public void getItemInBothCompartments6() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var rucksack = new Rucksack("CrZsJsPPZsGzwwsLwLmpwMDw");

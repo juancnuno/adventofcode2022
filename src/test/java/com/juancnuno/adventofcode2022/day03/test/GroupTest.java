@@ -6,12 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class GroupTest {
-    private GroupTest() {
-    }
-
+public final class GroupTest {
     @Test
-    void getItemInAllRucksacks1() {
+    public void getItemInAllRucksacks1() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var group = new Group("""
@@ -28,7 +25,7 @@ final class GroupTest {
     }
 
     @Test
-    void getItemInAllRucksacks2() {
+    public void getItemInAllRucksacks2() {
         // Arrange
         @SuppressWarnings("SpellCheckingInspection")
         var group = new Group("""

@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-final class RangePairTest {
-    private RangePairTest() {
-    }
-
+public final class RangePairTest {
     @Test
-    void oneRangeContainsOther1() {
+    public void oneRangeContainsOther1() {
         // Arrange
         var pair = new RangePair("2-8,3-7");
 
@@ -22,7 +19,7 @@ final class RangePairTest {
     }
 
     @Test
-    void oneRangeContainsOther2() {
+    public void oneRangeContainsOther2() {
         // Arrange
         var pair = new RangePair("6-6,4-6");
 

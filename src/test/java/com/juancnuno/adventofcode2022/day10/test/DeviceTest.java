@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class DeviceTest {
-    private DeviceTest() {
-    }
-
+public final class DeviceTest {
     @Test
-    void tick1() {
+    public void tick1() {
         // Arrange
         var input = """
                 noop
@@ -28,7 +25,7 @@ final class DeviceTest {
     }
 
     @Test
-    void tick2() {
+    public void tick2() {
         // Arrange
         var input = """
                 noop
@@ -47,7 +44,7 @@ final class DeviceTest {
     }
 
     @Test
-    void tick3() {
+    public void tick3() {
         // Arrange
         var input = """
                 noop
@@ -67,7 +64,7 @@ final class DeviceTest {
     }
 
     @Test
-    void tick4() {
+    public void tick4() {
         // Arrange
         var input = """
                 noop
@@ -88,7 +85,7 @@ final class DeviceTest {
     }
 
     @Test
-    void tick5() {
+    public void tick5() {
         // Arrange
         var input = """
                 noop
@@ -110,7 +107,7 @@ final class DeviceTest {
     }
 
     @Test
-    void getSignalStrengthSum() {
+    public void getSignalStrengthSum() {
         // Arrange
         var input = """
                 addx 15
@@ -271,7 +268,7 @@ final class DeviceTest {
     }
 
     @Test
-    void tick6() {
+    public void tick6() {
         // Arrange
         var input = """
                 addx 15
@@ -297,7 +294,7 @@ final class DeviceTest {
     }
 
     @Test
-    void tick7() {
+    public void tick7() {
         // Arrange
         var input = """
                 addx 15
@@ -325,7 +322,7 @@ final class DeviceTest {
     }
 
     @Test
-    void tick8() {
+    public void tick8() {
         // Arrange
         var input = """
                 addx 15

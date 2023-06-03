@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class ItemTest {
-    private ItemTest() {
-    }
-
+public final class ItemTest {
     @Test
-    void priority1() {
+    public void priority1() {
         // Arrange
         var item = new Item('p');
 
@@ -22,7 +19,7 @@ final class ItemTest {
     }
 
     @Test
-    void priority2() {
+    public void priority2() {
         // Arrange
         var item = new Item('L');
 
@@ -34,7 +31,7 @@ final class ItemTest {
     }
 
     @Test
-    void priority3() {
+    public void priority3() {
         // Arrange
         var item = new Item('P');
 
@@ -46,7 +43,7 @@ final class ItemTest {
     }
 
     @Test
-    void priority4() {
+    public void priority4() {
         // Arrange
         var item = new Item('v');
 
@@ -58,7 +55,7 @@ final class ItemTest {
     }
 
     @Test
-    void priority5() {
+    public void priority5() {
         // Arrange
         var item = new Item('t');
 
@@ -70,7 +67,7 @@ final class ItemTest {
     }
 
     @Test
-    void priority6() {
+    public void priority6() {
         // Arrange
         var item = new Item('s');
 

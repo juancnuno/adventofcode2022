@@ -6,12 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-final class KnotTest {
-    private KnotTest() {
-    }
-
+public final class KnotTest {
     @Test
-    void keepUpWith1() {
+    public void keepUpWith1() {
         // Arrange
         var head = new Knot(new Position(0, 2));
         var tail = new Knot(new Position(0, 0));
@@ -24,7 +21,7 @@ final class KnotTest {
     }
 
     @Test
-    void keepUpWith2() {
+    public void keepUpWith2() {
         // Arrange
         var head = new Knot(new Position(2, 0));
         var tail = new Knot(new Position(0, 0));
@@ -37,7 +34,7 @@ final class KnotTest {
     }
 
     @Test
-    void keepUpWith3() {
+    public void keepUpWith3() {
         // Arrange
         var head = new Knot(new Position(-2, 1));
         var tail = new Knot(new Position(0, 0));
@@ -50,7 +47,7 @@ final class KnotTest {
     }
 
     @Test
-    void keepUpWith4() {
+    public void keepUpWith4() {
         // Arrange
         var head = new Knot(new Position(-1, 2));
         var tail = new Knot(new Position(0, 0));
