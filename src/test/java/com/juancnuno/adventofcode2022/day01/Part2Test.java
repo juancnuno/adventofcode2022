@@ -1,12 +1,12 @@
 package com.juancnuno.adventofcode2022.day01;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
 
-final class Part2Test {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public final class Part2Test {
     @Test
-    void getSumOfThreeHighestCalorieCounts() {
+    public void getSumOfThreeHighestCalorieCounts() {
         // Arrange
         var part2 = new Part2("""
                 1000
