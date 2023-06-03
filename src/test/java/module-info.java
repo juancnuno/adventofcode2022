@@ -5,16 +5,16 @@ module com.juancnuno.adventofcode2022.test {
     requires org.junit.jupiter.engine;
     requires org.junit.platform.engine;
 
-    exports com.juancnuno.adventofcode2022.day01.test;
-    exports com.juancnuno.adventofcode2022.day02.test;
-    exports com.juancnuno.adventofcode2022.day03.test;
-    exports com.juancnuno.adventofcode2022.day04.test;
-    exports com.juancnuno.adventofcode2022.day06.test;
-    exports com.juancnuno.adventofcode2022.day07.test;
-    exports com.juancnuno.adventofcode2022.day08.test;
-    exports com.juancnuno.adventofcode2022.day09.test;
-    exports com.juancnuno.adventofcode2022.day10.test;
-    exports com.juancnuno.adventofcode2022.day11.test;
-    exports com.juancnuno.adventofcode2022.day12.test;
-    exports com.juancnuno.adventofcode2022.day13.test;
+    exports com.juancnuno.adventofcode2022.test.day01;
+    exports com.juancnuno.adventofcode2022.test.day02;
+    exports com.juancnuno.adventofcode2022.test.day03;
+    exports com.juancnuno.adventofcode2022.test.day04;
+    exports com.juancnuno.adventofcode2022.test.day06;
+    exports com.juancnuno.adventofcode2022.test.day07;
+    exports com.juancnuno.adventofcode2022.test.day08;
+    exports com.juancnuno.adventofcode2022.test.day09;
+    exports com.juancnuno.adventofcode2022.test.day10;
+    exports com.juancnuno.adventofcode2022.test.day11;
+    exports com.juancnuno.adventofcode2022.test.day12;
+    exports com.juancnuno.adventofcode2022.test.day13;
 }
