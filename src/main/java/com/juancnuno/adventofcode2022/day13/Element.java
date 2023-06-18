@@ -5,4 +5,3 @@ public interface Element extends Comparable<Element> {
         return new ElementParser().parse(element);
     }
 }
-// Testing gh auth login
