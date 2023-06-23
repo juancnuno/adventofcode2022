@@ -29,11 +29,11 @@ public final class Part1 {
         currentCalorieCount = 0;
     }
 
-    public int getMexCalorieCount() {
+    public int getMaxCalorieCount() {
         return maxCalorieCount;
     }
 
     public static void main(String[] args) {
-        AdventOfCode.printResultStream(lines -> new Part1(lines).getMexCalorieCount());
+        AdventOfCode.printResultStream(lines -> new Part1(lines).getMaxCalorieCount());
     }
 }

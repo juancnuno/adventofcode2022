@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class Part1Test {
     @Test
-    public void getMexCalorieCount() {
+    public void getMaxCalorieCount() {
         // Arrange
         var part1 = new Part1("""
                 1000
@@ -27,7 +27,7 @@ public final class Part1Test {
                 """.lines());
 
         // Act
-        var count = part1.getMexCalorieCount();
+        var count = part1.getMaxCalorieCount();
 
         // Assert
         assertEquals(24_000, count);
