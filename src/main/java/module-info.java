@@ -12,6 +12,8 @@ module com.juancnuno.adventofcode2022 {
     exports com.juancnuno.adventofcode2022.day11;
     exports com.juancnuno.adventofcode2022.day12;
     exports com.juancnuno.adventofcode2022.day13;
+    exports com.juancnuno.adventofcode2022.day14;
 
+    // noinspection Java9RedundantRequiresStatement
     requires com.google.common;
 }
