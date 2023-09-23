@@ -3,7 +3,7 @@ package com.juancnuno.adventofcode2022.day11;
 import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
-interface Operation {
+public interface Operation {
     Pattern PATTERN = Pattern.compile("new = old (.) (\\w+)");
 
     static Operation parseOperation(CharSequence sequence) {
