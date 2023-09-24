@@ -16,6 +16,7 @@ public final class Rucksack {
     }
 
     static Item findFirstItem(Collection<Character> collection1, Collection<Character> collection2) {
+        @SuppressWarnings("null")
         var item = collection1.stream()
                 .filter(collection2::contains)
                 .map(Item::new)
