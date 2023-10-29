@@ -1,5 +1,7 @@
-@SuppressWarnings("JavaModuleNaming")
+@SuppressWarnings("module")
 module com.juancnuno.adventofcode2022 {
+    requires com.google.common;
+
     exports com.juancnuno.adventofcode2022.day01;
     exports com.juancnuno.adventofcode2022.day02;
     exports com.juancnuno.adventofcode2022.day03;
@@ -13,7 +15,4 @@ module com.juancnuno.adventofcode2022 {
     exports com.juancnuno.adventofcode2022.day12;
     exports com.juancnuno.adventofcode2022.day13;
     exports com.juancnuno.adventofcode2022.day14;
-
-    // noinspection Java9RedundantRequiresStatement
-    requires com.google.common;
 }
