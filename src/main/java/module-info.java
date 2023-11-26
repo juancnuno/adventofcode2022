@@ -1,6 +1,7 @@
 @SuppressWarnings("module")
 module com.juancnuno.adventofcode2022 {
     requires com.google.common;
+    requires com.juancnuno.adventofcode;
 
     exports com.juancnuno.adventofcode2022.day01;
     exports com.juancnuno.adventofcode2022.day02;

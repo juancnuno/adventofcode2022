@@ -1,6 +1,6 @@
 package com.juancnuno.adventofcode2022.day09;
 
-import com.juancnuno.adventofcode2022.AdventOfCode;
+import com.juancnuno.adventofcode.AdventOfCode;
 
 import java.util.Collection;
 import java.util.HashSet;

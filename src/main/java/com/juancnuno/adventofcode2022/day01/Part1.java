@@ -1,6 +1,6 @@
 package com.juancnuno.adventofcode2022.day01;
 
-import com.juancnuno.adventofcode2022.AdventOfCode;
+import com.juancnuno.adventofcode.AdventOfCode;
 
 import java.util.stream.Stream;
 

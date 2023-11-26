@@ -1,6 +1,6 @@
 package com.juancnuno.adventofcode2022.day08;
 
-import com.juancnuno.adventofcode2022.AdventOfCode;
+import com.juancnuno.adventofcode.AdventOfCode;
 
 final class Part2 {
     private Part2() {
